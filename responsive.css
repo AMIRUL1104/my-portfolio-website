@@ -1,9 +1,9 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
     /* header area stying */
     header{
         position: relative;
     }
-    header nav{
+    header .navList{
         display: none;
         border: 1px solid var(--font-color);
         border-right: none;
@@ -37,6 +37,9 @@
  #home_section{
     flex-direction: column;
 }
+.profile_intro{
+    margin-top: 30px;
+}
 /* about section styling  */
 #about_section .about_container{
     flex-direction: column;
@@ -63,6 +66,184 @@
     padding: 6px 20px;
     font-size: 15px;
 }
+
+.contact-wrapper {
+flex-direction: column;
+text-align: center;
+}
+
+.contact-info {
+text-align: center;
+}
+
+}
+
+
+@media screen and (max-width: 425px) {
+    
+
+ header div .header_btn, header div .header_btn_2{
+    padding: 7px 10px;
+}
+
+    /* home area styling  */
+ 
+#home_section{
+    padding: 60px 0px;
+    text-align: center;
+   
+}
+.profile_intro{
+    margin-top: 30px;
+}
+
+.profile_img img{
+    max-width: 300px;
+    margin: auto;
+}
+#home_section h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.profile_intro p{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+#home_section .btn,#about_section .btn{
+    padding: 10px;
+}
+.social_media a{
+    font-size: 22px;
+}
+.profile_btn button i,.header_btns .header_btn_2 i{
+    font-size: 14px;
+}
+
+/* about section styling  */
+h2{
+    font-size: 25px;
+}
+#about_section .about_img {
+    width: 80%;
+
+}
+#about_section .about_img img{
+    max-width: 300px;
+}
+#about_section h3{
+    font-size: 20px;
+}
+#about_section p{
+    font-size: 16px;
+    max-width: 400px;
+    margin: 10px auto;
+}
+/* my project  area styling */
+  
+
+.project_item h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--spacial-color);
+    text-transform: capitalize;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.project_item p{
+    font-size: 15px;
+}
+
+/* skills area styling */
+.skills_container h3{
+    font-size: 20px;
+}
+.skills_container .skill_item{
+    gap: 10px;
+    padding: 10px;
+    margin: 10px auto;
+}
+.skill_item p{
+    font-size: 15px;
+}
+.skill_bar{
+    margin-top: 0px;
+}
+
+/* education area styling */
+.education_container img{
+     max-width: 320px; 
+    margin: 0px auto;
+}
+
+
+/* Contact Section */
+#contact h2 {
+font-size: 30px;
+}
+.contact-form input,
+.contact-form textarea {
+padding: 10px;
+font-size: 14px;
+}
+
+
+}
+
+@media screen and (max-width: 375px) {
+    
+
+ header div .header_btn, header div .header_btn_2{
+    padding: 5px 10px;
+}
+
+    /* home area styling  */
+ 
+#home_section{
+    padding: 45px 0px;
+}
+.header{
+    padding: 10px;
+}
+#home_section h1{
+    font-size: 26px;
+}
+.profile_intro p{
+    font-size: 15px;
+}
+#home_section .btn,#about_section .btn{
+    padding: 5px 10px;
+}
+.social_media a{
+    font-size: 20px;
+}
+.profile_btn button i,.header_btns .header_btn_2 i{
+    font-size: 14px;
+}
+
+/* about section styling  */
+#about_section .about_img {
+     width: 100%; 
+    margin: 0px auto;
+}
+#about_section .about_img img{
+    width: 300px;
+}
+#about_section h3{
+    font-size: 20px;
+}
+#about_section p{
+    font-size: 15px;
+    max-width: 340px;
+}
+/* my project  area styling */
+ .project_item img{
+    max-width: 330px;
+} 
+
+
+/* education area styling */
+
+
+/* Contact Section */
 
 
 

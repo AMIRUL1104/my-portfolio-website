@@ -13,23 +13,58 @@
     --background_color_3: #000000;
 
 }
+html.light{
+    --primary-color: #0f3072;
+    --secondary-color: #814e00;
+    --font-color: #000000;
+    --background-color_2: #f4f4f4;
+    --background-color: #d1b3ff;
+    --spacial-color: #1e4ea7;
+    --background_color_3: #dddddd;
+}
 body{
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
     color: var(--font-color);
+    background-color: var(--background-color);
+
+}
+/* common styling */
+#about_section,#projects_section,#skills_container,#education_section{
+    padding: 60px 0px;
+    text-align: left;
+    background-color: var(--background_color_3);
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--spacial-color);
+    display: inline;
+    border-bottom: 2px solid var(--spacial-color);
+
 }
 
+
 /* header area stying */
-header{
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: var(--primary-color);
+    position: sticky;
+    top: 0px;
+    z-index: 10;
 }
 header h3{
     font-family: Georgia, 'Times New Roman', Times, serif;
-
     font-size: 18px;
     text-transform: capitalize;
     letter-spacing: 2px;
@@ -46,10 +81,8 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: var(--secondary-color);
-
 }
-header div .header_btn, header div .header_btn_2{
-    
+header div .header_btn, header div .header_btn_2,.menuBar{
     padding: 10px 20px;
     background-color: var(--background-color);
     color: var(--font-color);
@@ -69,6 +102,7 @@ header div .header_btn, header div .header_btn_2{
     align-items: center;
     flex-direction: row-reverse;
     justify-content: space-evenly;
+    background-color: var(--background-color);
 }
 .profile_img img{
     max-width: 400px;
@@ -84,9 +118,8 @@ header div .header_btn, header div .header_btn_2{
 }
 .intro{
     color: var(--primary-color);
-     font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-
 }
  .profile_btn{
     margin: 40px auto;
@@ -114,7 +147,6 @@ header div .header_btn, header div .header_btn_2{
     justify-content: center;
     gap: 20px;
 }
-
 .social_media a{
     color: var(--font-color);
     font-size: 28px;
@@ -139,34 +171,13 @@ header div .header_btn, header div .header_btn_2{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     padding: 0px;
-
 }
 @keyframes rotate{
     0%{transform: rotate(0deg);}
     100%{transform: rotate(360deg);}
 }
 /* about section styling  */
-#about_section,#projects_section,#skills_container,#education_section{
-    padding: 60px 0px;
-    text-align: left;
-    background-color: var(--background_color_3);
-    color: var(--background-color_2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-}
-h2{
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-transform: capitalize;
-    text-align: center;
-    color: var(--spacial-color);
-    display: inline;
-    border-bottom: 2px solid var(--spacial-color);
-
-}
 #about_section .about_img {
     padding: 0px ;
     margin-top: 20px;
@@ -176,8 +187,6 @@ h2{
     max-width: 400px;
     border-radius: 50%;
     margin: 0px 20px 30px;
-
-
 }
 #about_section .about_container{
     display: flex;
@@ -207,7 +216,7 @@ h2{
 #project_section{
     padding-top: 50px;
     text-align: center;
-    background-color: var(--background_color_3);
+    background-color: var(--background-color);
     color: var(--background-color_2);
 }
  #projects_section .projects_container{
@@ -228,7 +237,7 @@ h2{
     display: flex;
     flex-direction: row-reverse;
     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
 }
 .project_details{
@@ -255,28 +264,15 @@ h2{
     border-radius: 10px;
     margin-bottom: 15px;
 }
-.see_more_btn{
-    display: inline-block;
-    margin-top: 10px;
-    padding: 6px 20px;
-    background-color: transparent;
-    color: var(--font-color);
-    text-decoration: none;
-    border-radius: 0px 10px 5px 10px;
-    border: 1px solid var(--font-color);
-    font-weight: bold;
-    text-transform: capitalize;
-}
-.see_more_btn:hover{
-    background-color: #7a2e00;
-}
+
 .see_more{
-    display: none;
+    display: block;
     text-align: left;
     margin-top: 10px;
     padding: 10px;
     border-top: 1px solid var(--spacial-color);
 }
+
 .see_more h4{
     font-size: 20px;
     margin-bottom: 10px;
@@ -296,21 +292,8 @@ h2{
 .see_more ul li:not(:last-child){
     margin-bottom: 8px;
 }
-.see_more .less_btns{
-    display: inline-block;
-    margin-left: 80%;
-    padding: 2px 20px;
-    background-color: transparent;
-    color: var(--font-color);
-    text-decoration: none;
-    border-radius: 0px 10px 5px 10px;
-    border: 1px solid var(--font-color);
-    font-weight: bold;
-    text-transform: capitalize;
-}
-.see_more button:hover{
-    background-color: #7a2e00;
-}
+
+
 .live_project{
     margin-top: 15px;
     display: flex;
@@ -332,8 +315,8 @@ h2{
     background-color: #7a2e00;
 }
 .live_project i{
-    margin-right: 10px;
-    font-size: 16px;
+   margin-right: 10px;
+   font-size: 16px;
    color: var(--font-color);
    background-color: var(--background-color);
 }
@@ -352,38 +335,26 @@ h2{
 }
 .frontend_skills,.backend_skills{
     margin: 20px 0px;
-
 }
 .skills_container h3{
     font-size: 22px;
     margin-bottom: 0px;
     color: var(--spacial-color);
     text-transform: capitalize;
-     text-align: center; 
-     font-family: 'Times New Roman', Times, serif
+    text-align: center; 
+    font-family: 'Times New Roman', Times, serif
 }
 .skills_container .fr_bc_h3{
     color: var(--background-color_2);
-
     animation-name: color_effect;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-
 }
 @keyframes color_effect{
     0%{color: var(--background-color_2);}
     50%{color: var(--spacial-color);}
     100%{color: var(--background-color_2);}
 }
-/* .skills_container .front_end h3,.back_end h3{
-    font-size: 24px;
-    display: block;
-    margin-bottom: 20px;
-    text-align: center;
-    color: var(--font-color);
-    text-transform: capitalize;
-     font-family: 'Times New Roman', Times, serif
-} */
 .skills_container .frontend_skills,.skills_container .backend_skills{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -408,27 +379,21 @@ h2{
 }
 .skill_bar{
     width: 100%;
-    background-color: var(--background-color);
+    background-color: var(--background-color_2);
     border-radius: 10px;
     overflow: hidden;
     margin-top: 10px;
 }
-.skill_bar div{
+.skill_bar .learnd_style{
     height: 20px;
     border-radius: 10px;
     background-color: var(--spacial-color);
-    text-align: right;
+    text-align: center;
     color: var(--font-color);
     font-weight: bold;
     padding-right: 10px;
     line-height: 20px;
-    width: 50%;
-
-    /* animation-name: skill_progress_panding_by_color_effect;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite; */
+    padding-right: 10px;
 }
 
 /* education area styling */
@@ -438,23 +403,15 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    background-color: var(--background-color);
+
 }
-/* #education_section h2{
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-transform: capitalize;
-    color: var(--spacial-color);
-    display: inline;
-    border-bottom: 2px solid var(--spacial-color);
-} */
 #education_section .education_container{
     padding: 0px;
     margin: 10px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    align-items: center;
-    justify-content: center;
     gap: 20px;
     
 }
@@ -462,8 +419,7 @@ h2{
     color: var(--font-color);
     padding: 20px;
     border-radius: 10px;
-    /* max-width: 400px; */
-
+    margin: 0px auto;
 }
 .education_item{
     font-size: 18px;
@@ -484,10 +440,107 @@ h2{
     font-family: 'Times New Roman', Times, serif
 }
 .education_container img{
-    /* max-width: 500px; */
+    max-width: 400px; 
     border-radius: 10px;
     margin: 0px 20px;
 }
+
+
+/* Contact Section */
+#contact {
+    background-color: var(--background_color_3);
+    color: var(--background-color_2);
+    padding: 80px 0;
+    font-family: "Poppins", sans-serif;
+}
+.contact-container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--spacial-color);
+}
+
+
+#contact p {
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+.contact-info h3 {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #444;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+
 /* footer area styling */
 footer{
     text-align: center;
@@ -512,9 +565,4 @@ footer p{
 footer .social_media{
     margin: 10px;
     padding: 10px;
-}
-/* res */
-@media screen  {
-    
-    
 }

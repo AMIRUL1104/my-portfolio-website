@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>amirul islam</title>
+    <link rel="shortcut icon" href="images\favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="images\favicon.png" />
 
     <link
       rel="stylesheet"
@@ -14,24 +15,47 @@
     />
   </head>
   <body>
-    <header>
+    <header class="header">
       <h3>md amirul</h3>
-      <nav>
+      <nav class="navList">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#Education">Projects</a></li>
-          <li><a href="#services">Skills</a></li>
-          <li><a href="#services">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#home" onclick="scrollToSection('home_section')">Home</a>
+          </li>
+          <li>
+            <a href="#about" onclick="scrollToSection('about_section')"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#Education" onclick="scrollToSection('project_section')"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#services" onclick="scrollToSection('skills_section')"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a href="#services" onclick="scrollToSection('education_section')"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+          </li>
         </ul>
       </nav>
       <div class="header_btns">
         <button type="submit" class="header_btn">
-          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun" id="lightDarkIcon"></i>
         </button>
         <button type="submit" class="header_btn_2">
           <i class="fa-solid fa-download"></i>resume
+        </button>
+        <button type="submit" class="menuBar">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </header>
@@ -53,7 +77,7 @@
           both frontend and backend technologies.
         </p>
         <div class="profile_btn">
-          <button type="submit" class="btn">My Project</button>
+          <button type="submit" class="btn">Contact Me</button>
           <button type="submit" class="btn">
             <i class="fa-solid fa-download"></i>Download CV
           </button>
@@ -77,7 +101,7 @@
       <h2>About Me</h2>
       <div class="about_container">
         <div class="about_img">
-          <img src="images\about_section.png" alt="about image" />
+          <img src="images\aboutimg.jpg" alt="about image" />
         </div>
         <div class="about_content">
           <h3>I'm Md Amirul</h3>
@@ -130,14 +154,9 @@
       <div class="project_container">
         <div class="project_item">
           <img src="images\frontend_developer_img_2.jpg" alt="project image" />
-          <div class="project_details">
+          <div class="project_details1">
             <h3>booktrack - personal reading manager</h3>
-            <p>
-              A single page web app to manage my personal reading journey.It
-              tracks books I've read,plan to read and haveen't started yet
-              .Built with HTML,CSS, and JavaScript.
-              <button type="submit" class="see_more_btn">see more...</button>
-            </p>
+
             <div class="see_more">
               <h4>description</h4>
               <p>
@@ -156,7 +175,6 @@
                 <li>Technologies: HTML5, CSS3, JavaScript</li>
                 <li>Add personal notes</li>
               </ul>
-              <button type="submit" class="less_btns">less...</button>
             </div>
             <div class="live_project">
               <a href="http://"
@@ -169,32 +187,10 @@
         <div class="project_item">
           <img src="images\frontend_developer_img_2.jpg" alt="project image" />
           <div class="project_details">
-            <h3>booktrack - personal reading manager</h3>
-            <p>
-              A single page web app to manage my personal reading journey.It
-              tracks books I've read,plan to read and haveen't started yet
-              .Built with HTML,CSS, and JavaScript.
-              <button type="submit" class="see_more_btn">see more...</button>
-            </p>
+            <h3>project title</h3>
+
             <div class="see_more">
               <h4>description</h4>
-              <p>
-                BookTrack is a single-page reading management app designed to
-                organize and track personal book collections. It includes four
-                main sections — Home, Notes, Collection, and Reading Tracker.
-                Built using HTML, CSS, and Vanilla JavaScript with switch-case
-                logic for smooth section navigation.
-              </p>
-              <h4>key features</h4>
-              <ul>
-                <li>Single-page application structure</li>
-                <li>Four main sections for organization</li>
-                <li>Switch-case logic for navigation</li>
-                <li>Responsive design for various devices</li>
-                <li>Technologies: HTML5, CSS3, JavaScript</li>
-                <li>Add personal notes</li>
-              </ul>
-              <button type="submit" class="less_btns">less...</button>
             </div>
             <div class="live_project">
               <a href="http://"
@@ -207,32 +203,10 @@
         <div class="project_item">
           <img src="images\frontend_developer_img_2.jpg" alt="project image" />
           <div class="project_details">
-            <h3>booktrack - personal reading manager</h3>
-            <p>
-              A single page web app to manage my personal reading journey.It
-              tracks books I've read,plan to read and haveen't started yet
-              .Built with HTML,CSS, and JavaScript.
-              <button type="submit" class="see_more_btn">see more...</button>
-            </p>
+            <h3>project title</h3>
+
             <div class="see_more">
               <h4>description</h4>
-              <p>
-                BookTrack is a single-page reading management app designed to
-                organize and track personal book collections. It includes four
-                main sections — Home, Notes, Collection, and Reading Tracker.
-                Built using HTML, CSS, and Vanilla JavaScript with switch-case
-                logic for smooth section navigation.
-              </p>
-              <h4>key features</h4>
-              <ul>
-                <li>Single-page application structure</li>
-                <li>Four main sections for organization</li>
-                <li>Switch-case logic for navigation</li>
-                <li>Responsive design for various devices</li>
-                <li>Technologies: HTML5, CSS3, JavaScript</li>
-                <li>Add personal notes</li>
-              </ul>
-              <button type="submit" class="less_btns">less...</button>
             </div>
             <div class="live_project">
               <a href="http://"
@@ -251,49 +225,10 @@
 
       <div class="skills_container">
         <h3 class="fr_bc_h3">frontend technologies</h3>
+        <div class="frontend_skills"></div>
 
-        <div class="frontend_skills">
-          <div class="skill_item">
-            <h3>HTML5</h3>
-            <div class="skill_bar">
-              <div class="skill_level html_level">95%</div>
-            </div>
-          </div>
-          <div class="skill_item">
-            <h3>CSS3</h3>
-            <div class="skill_bar">
-              <div class="skill_level css_level">90%</div>
-            </div>
-          </div>
-          <div class="skill_item">
-            <h3>JavaScript</h3>
-            <div class="skill_bar">
-              <div class="skill_level js_level">80%</div>
-            </div>
-          </div>
-          <div class="skill_item">
-            <h3>React</h3>
-            <div class="skill_bar">
-              <div class="skill_level react_level">10%</div>
-            </div>
-          </div>
-        </div>
         <h3 class="fr_bc_h3">backend technologies</h3>
-
-        <div class="backend_skills">
-          <div class="skill_item">
-            <h3>Node.js</h3>
-            <div class="skill_bar">
-              <div class="skill_level node_level">0%</div>
-            </div>
-          </div>
-          <div class="skill_item">
-            <h3>Express.js</h3>
-            <div class="skill_bar">
-              <div class="skill_level express_level">0%</div>
-            </div>
-          </div>
-        </div>
+        <div class="backend_skills"></div>
       </div>
     </section>
 
@@ -325,8 +260,55 @@
     </section>
 
     <!-- contact section -->
-    <section id="contsct_section">
-      <form action=""></form>
+    <section id="contact">
+      <div class="contact-container">
+        <h2>Let’s Connect</h2>
+        <p>
+          Got a project or collaboration idea? Drop me a message — I’d love to
+          hear from you.
+        </p>
+
+        <div class="contact-wrapper">
+          <!-- Contact Form -->
+          <form class="contact-form" action="#" method="post">
+            <input
+              type="text"
+              name="name"
+              autocomplete="text"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              autocomplete="email"
+            />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h3>Contact Details</h3>
+            <p><strong>Email:</strong> amirulislam9.e@gmail.com</p>
+            <p><strong>Location:</strong> Sylhet, Bangladesh</p>
+            <!-- <div class="social-links">
+              <a href="<https://github.com/amirul>" target="_blank">GitHub</a>
+              <a href="<https://linkedin.com/in/amirul>" target="_blank"
+                >LinkedIn</a
+              >
+              <a href="<https://twitter.com/amirul>" target="_blank">Twitter</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- footer section  -->
