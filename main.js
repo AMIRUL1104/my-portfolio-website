@@ -2,7 +2,6 @@
 const header_btn = document.querySelector(".header_btn");
 const htmlTag = document.documentElement;
 const lightDarkIcon = document.getElementById("lightDarkIcon");
-// lightDarkIcon.classList.add("fa-solid fa-moon");
 
 header_btn.addEventListener("click", function () {
   if (htmlTag.className === "") {
@@ -37,36 +36,57 @@ function windowWidth() {
 windowWidth();
 window.addEventListener("resize", windowWidth);
 
+// project section project items details function
+// it is created by using JS event bubbling and deligation
+let see_more = document.querySelector(".see_more");
+see_more.addEventListener("click", function (btn) {
+  if (btn.target.tagName === "BUTTON") {
+    let parent = btn.target.parentElement;
+    let a = parent.lastElementChild;
+    if (a.style.display === "block") {
+      a.style.display = "none";
+      btn.target.textContent = "less";
+    } else {
+      a.style.display = "block";
+      btn.target.textContent = "see more...";
+    }
+  }
+});
+
 // skill section function
 const frontend_skills = document.querySelector(".frontend_skills");
 const backend_skills = document.querySelector(".backend_skills");
 
 const frontend_tech = [
-  { techNAME: "HTML5", learned: "95%", icon: "fa-brands fa-html5" },
-  { techNAME: "CSS3", learned: "85%", icon: "fa-brands fa-css3-alt" },
-  { techNAME: "JavaScript", learned: "80%", icon: "fa-brands fa-square-js" },
-  { techNAME: "React", learned: "10%", icon: "fa-brands fa-react" },
-  { techNAME: "Next.js", learned: "0%", icon: "" },
+  { techNAME: "HTML5", learned: "95%", icon: "logo-img/html-5.png" },
+  { techNAME: "CSS3", learned: "85%", icon: "logo-img/css-3.png" },
+  { techNAME: "JavaScript", learned: "80%", icon: "logo-img/js.png" },
+  { techNAME: "React", learned: "10%", icon: "logo-img/atom.png" },
+  { techNAME: "Next.js", learned: "0%", icon: "logo-img/nextjs.png" },
 ];
 
 const backend_tech = [
-  { techNAME: "Node.js", learned: "0%", icon: "fa-brands fa-node-js" },
-  { techNAME: "Express.js", learned: "0%", icon: "" },
-  { techNAME: "MongoDB", learned: "0%", icon: "" },
-  { techNAME: "REST API", learned: "0%", icon: "" },
+  { techNAME: "Node.js", learned: "0%", icon: "logo-img/nodejs.png" },
+  { techNAME: "Express.js", learned: "0%", icon: "logo-img/express.png" },
+  { techNAME: "MongoDB", learned: "0%", icon: "logo-img/database-storage.png" },
+  { techNAME: "REST API", learned: "0%", icon: "logo-img/rest-api.png" },
 ];
 
 frontend_tech.forEach((tech) => {
   let skill_item = document.createElement("div");
   frontend_skills.appendChild(skill_item);
   skill_item.className = "skill_item";
+
+  let skill_name_div = document.createElement("div");
+  skill_item.appendChild(skill_name_div);
+
   let h3 = document.createElement("h3");
-  skill_item.appendChild(h3);
+  skill_name_div.appendChild(h3);
   h3.textContent = tech.techNAME;
 
-  // let i = document.createElement("i");
-  // skill_item.appendChild(i);
-  // i.className = tech.icon;
+  let logo = document.createElement("img");
+  skill_name_div.appendChild(logo);
+  logo.setAttribute("src", tech.icon);
 
   let skill_bar = document.createElement("div");
   skill_item.appendChild(skill_bar);
@@ -84,9 +104,17 @@ backend_tech.forEach((tech) => {
   let skill_item = document.createElement("div");
   backend_skills.appendChild(skill_item);
   skill_item.className = "skill_item";
+
+  let skill_name_div = document.createElement("div");
+  skill_item.appendChild(skill_name_div);
+
   let h3 = document.createElement("h3");
-  skill_item.appendChild(h3);
+  skill_name_div.appendChild(h3);
   h3.textContent = tech.techNAME;
+
+  let logo = document.createElement("img");
+  skill_name_div.appendChild(logo);
+  logo.setAttribute("src", tech.icon);
 
   let skill_bar = document.createElement("div");
   skill_item.appendChild(skill_bar);
