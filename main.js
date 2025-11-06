@@ -1,16 +1,20 @@
 // dark/light function function
-const header_btn = document.querySelector(".header_btn");
-const htmlTag = document.documentElement;
 const lightDarkIcon = document.getElementById("lightDarkIcon");
-
+const header_btn = document.querySelector(".header_btn");
+let currentTheme = localStorage.getItem("theme");
+if (currentTheme) {
+  document.body.setAttribute("data-theme", currentTheme);
+  lightDarkIcon.className =
+    currentTheme === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+}
 header_btn.addEventListener("click", function () {
-  if (htmlTag.className === "") {
-    htmlTag.classList.add("light");
-    lightDarkIcon.className = "fa-solid fa-moon";
-  } else {
-    htmlTag.classList.remove("light");
-    lightDarkIcon.className = "fa-solid fa-sun";
-  }
+  let isLight = document.body.getAttribute("data-theme") === "light";
+  let newTheme = isLight ? "dark" : "light";
+  document.body.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+
+  lightDarkIcon.className =
+    newTheme === "light" ? "fa-solid fa-moon" : "fa-solid fa-sun";
 });
 
 // navigation menu function

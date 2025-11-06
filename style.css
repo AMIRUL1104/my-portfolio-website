@@ -4,23 +4,25 @@
     margin: 0px;
 }
 :root{
-    --primary-color: #0f3072;
+      --primary-color: #0f3072;
     --secondary-color: #814e00;
     --font-color: #ffffff;
     --background-color_2: #f4f4f4;
     --background-color: #0a0413;
     --spacial-color: #1e4ea7;
     --background_color_3: #000000;
-
+    
 }
-html.light{
-    --primary-color: #0f3072;
+[data-theme = "light"]{
+     --primary-color: #0f3072;
     --secondary-color: #814e00;
     --font-color: #000000;
     --background-color_2: #f4f4f4;
     --background-color: #d1b3ff;
     --spacial-color: #1e4ea7;
     --background_color_3: #dddddd;
+
+
 }
 body{
     font-family: Arial, sans-serif;
@@ -28,6 +30,7 @@ body{
     background-color: var(--background-color);
 
 }
+
 /* common styling */
 #about_section,#projects_section,#skills_container,#education_section{
     padding: 60px 0px;
